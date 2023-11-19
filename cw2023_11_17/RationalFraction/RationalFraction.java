@@ -45,9 +45,12 @@ public class RationalFraction {
 	}
 
 	public void reduce() {
-		int nod = Helper.euqlid(numer,denom);
-		numer /= nod;
-		denom /= nod;
+		if (numer != 0){
+			int nod = Helper.euqlid(numer,denom);
+			numer /= nod;
+			denom /= nod;
+		}
+
 	}
 
 	public RationalFraction add(RationalFraction fraction) {
@@ -73,7 +76,71 @@ public class RationalFraction {
 		this.reduce();
 	}
 
+
+	public RationalFraction sub(RationalFraction fraction) {
+		if (denom != fraction.denom) {
+			RationalFraction fractionNew = new RationalFraction(numer * fraction.denom - fraction.numer * denom,denom * fraction.denom);
+			fractionNew.reduce();
+			return fractionNew;
+		} else {
+			RationalFraction fractionNew = new RationalFraction(numer - fraction.denom, denom);
+			fractionNew.reduce();
+			return fractionNew;
+		}
+	}
+
+	public void sub2(RationalFraction fraction) {
+		if (denom != fraction.denom) {
+			numer = numer * fraction.denom - fraction.numer * denom;
+			denom = denom * fraction.denom;
+		} else {
+			numer -= fraction.denom;
+		}
+	}
+
+	public RationalFraction mult(RationalFraction fraction) {
+		RationalFraction fractionNew = new RationalFraction(numer * fraction.numer, denom * fraction.denom);
+		fractionNew.reduce();
+		return fractionNew;
+	}
+
+	public void mult2(RationalFraction fraction) {
+		numer *= fraction.numer;
+		denom *= fraction.denom;
+		this.reduce();
+	}
+
+	public RationalFraction div(RationalFraction fraction) {
+		RationalFraction fractionNew = new RationalFraction(numer * fraction.denom, denom * fraction.numer);
+		fractionNew.reduce();
+		return fractionNew;
+	}
+
+	public void div2(RationalFraction fraction) {
+		numer *= fraction.denom;
+		denom *= fraction.numer;
+		this.reduce();
+	}
 	public String toString() {
 		return numer + "/" + denom;
+	}
+
+	public double value() {
+		return (numer / (denom * 1.0));
+	}
+
+	public boolean equals(RationalFraction fraction) {
+		RationalFraction fractionNew1 = new RationalFraction(numer, denom);
+		RationalFraction fractionNew2 = new RationalFraction(fraction.numer, fraction.denom);
+		fractionNew1.reduce();
+		fractionNew2.reduce();
+		if (fractionNew1.numer == 0 || fractionNew2.numer == 0) {
+			return true;
+		} else if (fractionNew1.numer == fractionNew2.numer && fractionNew1.denom == fractionNew2.denom) {
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 }
