@@ -31,6 +31,10 @@ public class Vector2D {
 		this.y = y;
 	} 
 
+	public Vector2D(double[] arr) {
+		x = arr[0];
+		y = arr[0];
+	}
 	public void setX(double x) {
 		this.x = x;
 	}

@@ -143,6 +143,10 @@ public class Matrix2x2 {
     }
 
     public Vector2D multVector(Vector2D vector) {
-
+        Vector2D vector1 = new Vector2D(array[0]);
+        Vector2D vector2 = new Vector2D(array[1]);
+        vector1.setX(vector1.scalarProduct(vector));
+        vector1.setY(vector2.scalarProduct(vector));
+        return vector1;
     }
 }
