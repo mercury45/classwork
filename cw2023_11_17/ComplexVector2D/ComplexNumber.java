@@ -56,7 +56,7 @@ public class ComplexNumber {
     }
 
     public String toString() {
-        if (image < 0) {
+        if (image < 0п) {
             return real + " - " + image + " * i";
         } else {
             return real + " + " + image + " * i";

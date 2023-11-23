@@ -1,6 +1,8 @@
 # Compiled class file
 *.class
-
+.idea
+*.iml
+cw2023_10_14
 # Log file
 *.log
 
