@@ -1,4 +1,4 @@
-public class Main {
+public class MainComplexVector2D {
     public static void main(String[] args) {
         // Создаем комплексные числа
         ComplexNumber complex1 = new ComplexNumber(1, 2);

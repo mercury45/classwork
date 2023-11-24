@@ -10,6 +10,14 @@ public class ComplexVector2D {
         this.y = y;
     }
 
+    public ComplexNumber getX() {
+        return x;
+    }
+
+    public ComplexNumber getY() {
+        return y;
+    }
+
     public ComplexVector2D add(ComplexVector2D vector) {
         return new ComplexVector2D(x.add(vector.x),y.add(vector.y));
     }

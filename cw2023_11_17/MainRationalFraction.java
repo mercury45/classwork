@@ -1,4 +1,4 @@
-public class Main {
+public class MainRationalFraction {
 	public static void main(String [] args) {
 		RationalFraction drob = new RationalFraction(2,4);
 		RationalFraction drob2 = new RationalFraction(4,8);

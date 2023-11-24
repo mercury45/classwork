@@ -9,6 +9,14 @@ public class RationalVector2D {
         y = fraction2;
     }
 
+    public RationalFraction getX() {
+        return x;
+    }
+
+    public RationalFraction getY() {
+        return y;
+    }
+
     public RationalVector2D add(RationalVector2D other) {
         RationalFraction fraction1 = this.x.add(other.x);
         RationalFraction fraction2 = this.y.add(other.y);
