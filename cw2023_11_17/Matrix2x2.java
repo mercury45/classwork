@@ -116,11 +116,12 @@ public class Matrix2x2 {
     public Matrix2x2 inverseMatrix() {
         double temp;
         double[][] arr = new double[array.length][array[0].length];
-        if (this.det() != 0) {
-            arr[0][0] = array[1][1];
-            arr[1][1] = array[0][0];
-            arr[0][1] = -array[0][1];
-            arr[1][0] = -array[1][0];
+        if (det() != 0) {
+            double det = det();
+            arr[0][0] = array[1][1] / det;
+            arr[1][1] = array[0][0] / det;
+            arr[0][1] = -array[0][1] / det;
+            arr[1][0] = -array[1][0] / det;
             return new Matrix2x2(arr);
         } else {
             return null;
@@ -143,8 +144,8 @@ public class Matrix2x2 {
     }
 
     public Vector2D multVector(Vector2D vector) {
-        Vector2D vector1 = new Vector2D(array[0]);
-        Vector2D vector2 = new Vector2D(array[1]);
+        Vector2D vector1 = new Vector2D(array[0][0],array[0][0]);
+        Vector2D vector2 = new Vector2D(array[1][0], array[1][1]);
         vector1.setX(vector1.scalarProduct(vector));
         vector1.setY(vector2.scalarProduct(vector));
         return vector1;

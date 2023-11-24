@@ -1,4 +1,4 @@
-public class Main {
+public class MainRationalVector2D {
     public static void main(String[] args) {
         // Создаем рациональные дроби
         RationalFraction fraction1 = new RationalFraction(1, 2);
