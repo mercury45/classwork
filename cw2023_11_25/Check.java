@@ -118,15 +118,16 @@ public class Check {
         }
         return false;
     }
-
+    public static boolean firstIsGlas(String line) {
+        return (equal(line.charAt(0) + "", "[AEYUIOaeyuio]"));
+    }
     public static boolean isColsHasFirstGlas(String[][] arr) {
-        char sym;
         int c = 0;
 
         for (int i = 0; i < arr[0].length; i++) {
             boolean f = true;
             for (int j = 0; j < arr.length && f; j++) {
-                if (equal(arr[j][i].charAt(0) + "", "[AEYUIOaeyuio]")) {
+                if (firstIsGlas(arr[i][j])) {
                     f = false;
                     c++;
                 }
@@ -139,7 +140,6 @@ public class Check {
     }
 
     public static boolean isNumMod2InArray(int[][] array) {
-        int c = 0;
         for (int i = 0; i < array.length; i++) {
             boolean f = true;
             for (int j = 0; j < array[0].length && f; j++) {
@@ -153,4 +153,39 @@ public class Check {
         }
         return true;
     }
+
+    public static boolean notMoreThan2GlasString(String[][] line) {
+        for (int i = 0; i < line[0].length; i++) {
+            int c = 0;
+            boolean f = true;
+            for (int j = 0; j < line.length && f; j++) {
+                if (firstIsGlas(line[j][i])) {
+                    c++;
+                }
+                if (c > 2) {
+                    f = false;
+                }
+            }
+            if (!f) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean notLessThan3Chet(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            int c = 0;
+            for (int j = 0; j < array[i].length; j++) {
+                if (isAllChet(array[i][j])) {
+                    c++;
+                }
+            }
+            if (c < 3) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
