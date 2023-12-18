@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class RationalMatrix2x2 {
     private RationalFraction[][] matrix;
 

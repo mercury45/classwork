@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class ComplexMatrix2x2 {
     private ComplexNumber[][] matrix;
 

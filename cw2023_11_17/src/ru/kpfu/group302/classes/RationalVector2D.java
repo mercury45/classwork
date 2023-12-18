@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class RationalVector2D {
     private RationalFraction x;
     private RationalFraction y;

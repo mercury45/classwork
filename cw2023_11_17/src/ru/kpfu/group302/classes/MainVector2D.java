@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class MainVector2D {
 	public static void main(String[] args) {
 		double x = Double.parseDouble(args[0]);

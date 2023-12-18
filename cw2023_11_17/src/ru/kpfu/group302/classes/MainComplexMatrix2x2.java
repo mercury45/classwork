@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class MainComplexMatrix2x2 {
 
     public static void main(String[] args) {

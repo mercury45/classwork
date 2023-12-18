@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class ComplexNumber {
     private double real;
     private double image;
@@ -26,6 +28,17 @@ public class ComplexNumber {
         real -= number.real;
         image -= number.image;
     }
+    
+    public ComplexNumber multNumber(double num) {
+        return new ComplexNumber(real * num, image * num);
+    }
+
+    public void multNumber2(double num) {
+        real *= num;
+        image *= num;
+    }
+
+
 
     public ComplexNumber mult(ComplexNumber number) {
         return new ComplexNumber(real * number.real - image * number.image, real * number.image + image * number.real);

@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class MainRationalFraction {
 	public static void main(String [] args) {
 		RationalFraction drob = new RationalFraction(2,4);

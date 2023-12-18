@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class RationalComplexMatrix2x2 {
     RationalComplexNumber[][] matrix;
 

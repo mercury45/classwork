@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class RationalComplexVector2D {
     private RationalComplexNumber x;
     private RationalComplexNumber y;

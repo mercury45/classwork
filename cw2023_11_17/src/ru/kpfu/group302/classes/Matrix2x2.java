@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class Matrix2x2 {
     double[][] array = new double[2][2];
     public Matrix2x2() {

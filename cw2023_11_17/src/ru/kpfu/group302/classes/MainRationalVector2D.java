@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class MainRationalVector2D {
     public static void main(String[] args) {
         // Создаем рациональные дроби

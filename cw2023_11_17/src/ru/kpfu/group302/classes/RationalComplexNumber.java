@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class RationalComplexNumber {
     private RationalFraction real;
     private RationalFraction image;

@@ -1,3 +1,5 @@
+package ru.kpfu.group302.classes;
+
 public class ComplexVector2D {
     private ComplexNumber x;
     private ComplexNumber y;
